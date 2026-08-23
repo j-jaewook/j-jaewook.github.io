@@ -1,68 +1,52 @@
-# Your job market website
+# jaewook-jung.github.io — site files
 
-Four pages, no build step, no dependencies. Edit the HTML directly.
-
-## Files
+Four pages, plain HTML, no build step. Edit the HTML directly on GitHub.
 
 | File | What it is |
 |---|---|
-| `index.html` | Home — photo, positioning, education, job market paper |
-| `research.html` | Papers, abstracts, links |
-| `teaching.html` | Courses, teaching statement, evaluations |
+| `index.html` | Home — about me, job market paper, fields |
+| `research.html` | Papers and abstracts |
+| `teaching.html` | Courses and teaching statement |
 | `cv.html` | CV download and references |
-| `style.css` | All the styling. Colors and fonts are at the top. |
+| `style.css` | All styling. Colors are at the very top. |
 
-## Before you publish
+## Still to fill in
 
-1. **Find and replace** `FIELD` and `UNIVERSITY` across all four HTML files.
-   Your name is already filled in. Any decent text editor does find-and-replace
-   across a whole folder at once.
-2. Fill in the placeholder text. Anything in CAPS or reading like an
-   instruction is meant to be replaced.
-3. Update the masthead block (name, role, contact) in **all four** files — it's
-   duplicated on purpose so the site needs no JavaScript.
-4. Drop in your files, named exactly:
-   - `photo.jpg` — headshot, roughly square, 500 px or larger
-   - `cv.pdf`
-   - `jmp.pdf` — job market paper
-   - `teaching-statement.pdf`
-   - Any other PDFs you linked
-5. Delete sections you don't need. Empty sections look worse than absent ones.
+In `index.html`: the About me paragraph, `ADVISOR NAME`, and the job market
+paper block. Then `research.html` and `teaching.html`.
 
-To preview locally, just double-click `index.html`.
+In the sidebar (all four files): your real Google Scholar and LinkedIn URLs.
+If you don't have a Scholar profile yet, delete that `<li>` — a link to
+Scholar's homepage looks worse than no link.
 
-## Putting it on GitHub Pages
+## Files to upload alongside these
 
-1. Sign in to GitHub as **j-jaewook**.
-2. Create a new repository named exactly `j-jaewook.github.io` — all lowercase,
-   matching the username. Set it to **Public**.
-3. On the repo page, click **Add file → Upload files**, drag in everything from
-   this folder, and click **Commit changes**.
-4. Wait about a minute, then visit `https://j-jaewook.github.io`.
+Named exactly:
 
-That's it. There's no build to configure and no plan to choose. To update
-anything later, upload the changed file again — it overwrites the old one.
+- `photo.jpg` — headshot. Portrait orientation, at least 600 px wide.
+  It is cropped to 4:5, so leave a little headroom.
+- `cv.pdf`
+- `jmp.pdf` — job market paper
+- `teaching-statement.pdf`
 
-## Adding a custom domain later
+## Editing on GitHub
 
-Optional, roughly $12/year. Buy the domain, then in the repo go to
-**Settings → Pages → Custom domain**, enter it, and add these DNS records at
-your registrar:
+Open the repo → click the file → pencil icon → edit → **Commit changes** →
+confirm. Live in about a minute. Hard-refresh to see it (Cmd+Shift+R on Mac,
+Ctrl+Shift+R on Windows).
 
-```
-A     @    185.199.108.153
-A     @    185.199.109.153
-A     @    185.199.110.153
-A     @    185.199.111.153
-CNAME www  j-jaewook.github.io
+**The sidebar is duplicated in all four files.** Get it right in `index.html`,
+then copy the whole `<aside class="sidebar">` ... `</aside>` block and paste it
+over the matching block in the other three.
+
+## Changing the color
+
+Top of `style.css`:
+
+```css
+--olive:      #556b2f;   /* buttons, links, headings rule */
+--olive-dark: #3e4f21;   /* hover state */
+--olive-wash: #f1f3e8;   /* job market paper background */
 ```
 
-Tick **Enforce HTTPS** once it becomes available. Your `.github.io` address
-keeps working and redirects.
-
-## Two things worth doing the same week
-
-- Set up a **Google Scholar profile** and link it in the masthead. For most
-  people it outranks their own site in search results.
-- Keep `cv.pdf` at that exact filename forever. People bookmark and email
-  direct links to it; changing the name breaks them silently.
+Change those three and the whole site follows.
