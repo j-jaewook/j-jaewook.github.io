@@ -9,10 +9,38 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Teaching page only */
+  .school {
+    color: #131a16;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 2.75rem 0 1.1rem;
+    padding: 0;
+    border: none;
+  }
+  .school:first-of-type { margin-top: 0; }
+  .role {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.4rem;
+  }
+  .level {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #74756c;
+    margin: 1rem 0 0.3rem;
+  }
+  .term {
+    margin: 0 0 0.35rem;
+    line-height: 1.55;
+  }
+  .term .when { font-weight: 500; }
+</style>
 </head>
 <body>
 <div class="page page--full">
-
   <header class="topbar">
     <h1 class="topbar__name"><a href="index.html">Jae Wook Jung</a></h1>
     <nav class="nav" aria-label="Main">
@@ -22,40 +50,27 @@
       <a href="teaching.html" aria-current="page">Teaching</a>
     </nav>
   </header>
-
   <main class="main">
 
-    <h2>Instructor of Record</h2>
+    <h2 class="school">Northeastern University</h2>
 
-    <div class="course">
-      <p class="code">ECON 1116</p>
-      <div>
-        <p class="title">Course Title</p>
-        <p class="detail">Undergraduate &middot; Summer 2025 &middot; Evaluation: 4.7 / 5.0</p>
-      </div>
-    </div>
+    <p class="role">Instructor</p>
+    <p class="term"><span class="when">Summer 2025:</span> ECON 1116 Principles of Microeconomics</p>
 
-    <h2>Teaching Assistant</h2>
+    <p class="role">Teaching Assistant</p>
 
-    <div class="course">
-      <p class="code">ECON 2350</p>
-      <div>
-        <p class="title">Course Title</p>
-        <p class="detail">Undergraduate &middot; Fall 2024, Fall 2023 &middot; Prof. Name</p>
-      </div>
-    </div>
+    <p class="level">Undergraduate</p>
+    <p class="term"><span class="when">Fall 2024:</span> ECON 2350 Course Title</p>
+    <p class="term"><span class="when">Spring 2024:</span> ECON 3410 Course Title</p>
+    <p class="term"><span class="when">Fall 2023:</span> ECON 2560 Course Title</p>
 
-    <div class="course">
-      <p class="code">ECON 5105</p>
-      <div>
-        <p class="title">Course Title</p>
-        <p class="detail">Ph.D. core &middot; Spring 2024 &middot; Prof. Name</p>
-      </div>
-    </div>
+    <p class="level">Graduate</p>
+    <p class="term"><span class="when">Spring 2023:</span> ECON 5105 Course Title</p>
 
-    <h2>Teaching Statement</h2>
+    <h2 class="school">Brigham Young University&ndash;Idaho</h2>
 
-    <p><a class="button" href="teaching-statement.pdf">Download (PDF)</a></p>
+    <p class="role">Teaching Assistant</p>
+    <p class="term"><span class="when">Fall 2019:</span> ECON 150 Course Title</p>
 
   </main>
 </div>
