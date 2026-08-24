@@ -12,8 +12,8 @@
   --rule:         #e4e4dd;
 
   --olive:        #131a16;   /* dark green — the accent */
-  --olive-dark:   #33473c;   /* hover: lighter, so the change is visible */
-  --olive-wash:   #edf1ee;   /* pale tint behind the paper block */
+  --olive-dark:   #131a16;   /* hover: lighter, so the change is visible */
+  --olive-wash:   #131a16;   /* pale tint behind the paper block */  /* pale tint behind the paper block */
 
   --measure:      38rem;
   --sidebar:      19rem;
