@@ -306,12 +306,9 @@ details.abstract-toggle p {
 
 .page--full {
   grid-template-columns: minmax(0, 1fr);
-  max-width: 56rem;
+  max-width: 68rem;
 }
-.page--full p,
-.page--full .paper,
-.page--full .facts,
-.page--full .course { max-width: 46rem; }
+
 
 /* ---------- Paper entries, Caicedo style ---------- */
 
