@@ -335,7 +335,7 @@ details.abstract-toggle p {
 .paper .authors a { color: var(--mute); }
 .paper .authors a:hover { color: var(--olive); }
 .paper .abstract {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   line-height: 1.62;
   color: var(--ink-soft);
   margin: 0;
