@@ -12,8 +12,8 @@
   --rule:         #e4e4dd;
 
   --olive:        #131a16;   /* dark green — the accent */
-  --olive-dark:   #131a16;   /* hover: lighter, so the change is visible */
-  --olive-wash:   #131a16;   /* pale tint behind the paper block */
+  --olive-dark:   #33473c;   /* hover: lighter, so the change is visible */
+  --olive-wash:   #edf1ee;   /* pale tint behind the paper block */
 
   --measure:      38rem;
   --sidebar:      19rem;
@@ -64,6 +64,9 @@ a:focus-visible {
   align-items: baseline;
   gap: 1rem 2rem;
 }
+
+.topbar__name a { color: #000; }
+.topbar__name a:hover { color: #000; }
 
 .topbar__name {
   font-family: var(--display);
@@ -298,6 +301,68 @@ details.abstract-toggle p {
 .button:hover { background: var(--olive-dark); text-decoration: none; }
 
 .updated { font-size: 0.85rem; color: var(--mute); }
+
+/* ---------- Pages with no sidebar (Research, CV, Teaching) ---------- */
+
+.page--full {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 56rem;
+}
+.page--full p,
+.page--full .paper,
+.page--full .facts,
+.page--full .course { max-width: 46rem; }
+
+/* ---------- Paper entries, Caicedo style ---------- */
+
+.paper {
+  padding: 0;
+  border-bottom: none;
+  margin: 0 0 2.25rem;
+}
+.paper h3 {
+  font-size: 1.06rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+.paper h3 a { color: var(--olive); }
+.paper h3 a:hover { color: var(--olive-dark); }
+.paper .authors {
+  color: var(--mute);
+  font-size: 0.93rem;
+  margin: 0 0 0.55rem;
+}
+.paper .authors a { color: var(--mute); }
+.paper .authors a:hover { color: var(--olive); }
+.paper .abstract {
+  font-size: 0.95rem;
+  line-height: 1.62;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.paper .links {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0.5rem 0 0;
+}
+.paper .links a + a { margin-left: 1rem; }
+
+.tag {
+  display: inline-block;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--olive);
+  padding: 0.14rem 0.5rem;
+  border-radius: 2px;
+  vertical-align: 0.14em;
+  margin-left: 0.45rem;
+}
+
+/* Work-in-progress entries: title and coauthors only */
+.paper--wip { margin-bottom: 1.35rem; }
 
 /* ---------- Mobile ---------- */
 
