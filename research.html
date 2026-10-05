@@ -9,13 +9,54 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Let titles and abstracts use the full width of the page */
+  .page--full .paper,
+  .page--full .paper p { max-width: none; }
+
+  /* Fold/unfold abstracts */
+  .paper .abstract-toggle { margin: 0.1rem 0 0; }
+  .paper .abstract-toggle summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--olive, #556b2f);
+    user-select: none;
+  }
+  .paper .abstract-toggle summary::-webkit-details-marker { display: none; }
+  .paper .abstract-toggle summary::before {
+    content: "";
+    width: 0.42rem;
+    height: 0.42rem;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(-45deg);
+    transition: transform 0.15s ease;
+    margin-right: 0.1rem;
+  }
+  .paper .abstract-toggle[open] summary::before { transform: rotate(45deg); }
+  .paper .abstract-toggle summary:hover { color: var(--olive-dark, #3e4f21); }
+  .paper .abstract-toggle summary:focus-visible {
+    outline: 2px solid var(--olive, #556b2f);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  .paper .abstract-toggle .abstract { margin-top: 0.45rem; }
+  @media (prefers-reduced-motion: reduce) {
+    .paper .abstract-toggle summary::before { transition: none; }
+  }
+</style>
 </head>
 <body>
 <div class="page page--full">
 
   <header class="topbar">
     <h1 class="topbar__name"><a href="index.html">Jae Wook Jung</a></h1>
-      <nav class="nav" aria-label="Main">
+    <nav class="nav" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
       <a href="research.html" aria-current="page">Research</a>
@@ -79,7 +120,11 @@
     <!-- A paper with no PDF yet: drop the <a> and leave plain text. -->
     <article class="paper">
       <h3>Open to All? Diversity Statements in Job Advertisements and Hiring Discrimination</h3>
-      <p class="authors">with Mark Granberg, Shantanu Khanna, and Samantha Sinclair</p>
+      <p class="authors">with
+        <a href="https://sites.google.com/view/markgranberg/" target="_blank" rel="noopener">Mark Granberg</a>,
+        <a href="https://www.shantanukhanna.com/" target="_blank" rel="noopener">Shantanu Khanna</a>, and
+        <a href="https://www.lnu.se/en/staff/samantha.sinclair" target="_blank" rel="noopener">Samantha Sinclair</a>
+      </p>
       <details class="abstract-toggle">
         <summary>Abstract</summary>
          <p class="abstract">
@@ -105,7 +150,7 @@
 
      <article class="paper paper--wip">
       <h3>Competitive Federalism and Development: Evidence from India&rsquo;s Aspirational Districts Programme</h3>
-      <p class="authors">with Shantanu Khanna</p>
+       <p class="authors">with <a href="https://www.shantanukhanna.com/" target="_blank" rel="noopener">Shantanu Khanna</a></p>
       
     </article>
 
