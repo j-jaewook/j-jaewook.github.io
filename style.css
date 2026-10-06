@@ -323,7 +323,7 @@ details.abstract-toggle p {
   margin: 0 0 0.25rem;
 }
 .paper h3 a { color: var(--olive); }
-.paper h3 a:hover { color: var(--olive-dark); }
+.paper h3 a:hover { color: #33473c; }
 .paper .authors {
   color: var(--mute);
   font-size: 0.93rem;
