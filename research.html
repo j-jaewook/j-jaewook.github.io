@@ -55,6 +55,17 @@
   @media (prefers-reduced-motion: reduce) {
     .paper .abstract-toggle summary::before { transition: none; }
   }
+
+/* Underline linked paper titles on hover */
+  .paper h3 a {
+    text-decoration: none;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  .paper h3 a:hover,
+  .paper h3 a:focus-visible {
+    text-decoration: underline;
+  }
 </style>
 </head>
 <body>
@@ -154,7 +165,7 @@
     <h2>Work in Progress</h2>
 
      <article class="paper">
-      <h3>Competitive Federalism and Development: Evidence from a place-based policy in India</h3>
+      <h3>Competitive Federalism and Development: Evidence from a place-based policy in India (Tentative title)</h3>
       <p class="authors">with <a href="https://www.shantanukhanna.com/" target="_blank" rel="noopener">Shantanu Khanna</a></p>
       <details class="abstract-toggle">
         <summary>Abstract</summary>
